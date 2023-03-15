@@ -1,0 +1,3 @@
+Hacer tambien piedra papel o tijeras
+Hacer array de objetos en trello
+HAcer TP4
