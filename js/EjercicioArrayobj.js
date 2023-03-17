@@ -58,6 +58,8 @@ let listaProductos = [
   { nombreProducto: "Agua micellar", precio: 2890, categoria: "Limpieza" },
 ];
 
+//Mostrar la tabla completa
+
 function estructuraTabla(listaProductos) {
   let tabla = "<table>";
   tabla += "<tr><th>Producto</th><th>Precio</th><th>Categoria</th></tr>";
@@ -72,6 +74,7 @@ function estructuraTabla(listaProductos) {
   document.write("<br><b>Tabla de productos</b>")
   document.write(tabla);
 
+  // Filtrar el arreglo de productos por ‘Protectores solares' y mostrar la tabla filtrada.
   let categoriaFiltro = "Protector solar"
   let productosFiltrados = listaProductos.filter(
     (producto) => producto.categoria === categoriaFiltro
@@ -92,6 +95,8 @@ function estructuraTabla(listaProductos) {
   document.write("<br><br><b>Tabla con filtro '"+ categoriaFiltro +"'</b>")
   document.write(tablaFiltrada)
 
+  //Buscar un producto serum y mostrarlo por pantalla,
+
   let productoBuscar = listaProductos.find((producto) => producto.nombreProducto === "Sérum hidratante")
 
   if(productoBuscar){
@@ -100,6 +105,7 @@ function estructuraTabla(listaProductos) {
     document.write("<br>No se encontró ningun producto con ese nombre")
   }
 
+  //Buscar un producto 'Bruma’ y mostrar un mensaje adecuado para el usuario si el producto no existe en el array.
   let productoNoExiste = listaProductos.find((producto) => producto.nombreProducto === "Bruma")
 
   if(productoNoExiste){
