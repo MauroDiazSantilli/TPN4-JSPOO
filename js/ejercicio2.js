@@ -1,4 +1,4 @@
-//Probando con constructor
+//Probando con funcion constructora
 
 function CuentaBancaria(){
     this.titular = "Alex" //Titular de la cuenta
