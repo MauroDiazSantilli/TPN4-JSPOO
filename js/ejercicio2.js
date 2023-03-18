@@ -28,7 +28,7 @@ function CuentaBancaria(){
   }
 }
 
-const cuenta1 = new CuentaBancaria();
+let cuenta1 = new CuentaBancaria();
 cuenta1.informe();
 cuenta1.depositar(1000);
 cuenta1.informe();
