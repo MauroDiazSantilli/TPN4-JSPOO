@@ -6,7 +6,7 @@ class Producto{
     }
 
     imprimirDatos(){
-        document.write(`<br>Codigo: ${this.codigo}</br><br> Nombre: ${this.nombre}</br><br> Precio: $${this.precio}</br>`)
+        document.write(`<br>Codigo: <b>${this.codigo}</b></br><br> Nombre: <b>${this.nombre}</b></br><br> Precio: <b>$${this.precio}</b></br>`)
         
     }
 }
