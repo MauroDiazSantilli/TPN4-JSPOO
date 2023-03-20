@@ -1,36 +1,39 @@
 //Probando con funcion constructora
 
 function CuentaBancaria(){
-    this.titular = "Alex" //Titular de la cuenta
-    this.saldo = 0 // Valor inicial igual a 0
+  this.titular = "Alex"; //Titular de la cuenta
+  this.saldo = 0; // Valor inicial igual a 0
 
-    this.depositar = function(cantidad){  
-        if (cantidad > 0){
-        this.saldo += cantidad
-        console.log(`Han sido depositados ${cantidad} pesos en su cuenta`)
+  this.depositar = function(cantidad){
+    if (cantidad > 0){
+      this.saldo += cantidad;
+      document.write(`Han sido depositados ${cantidad} pesos en su cuenta.<br>`);
     } else{
-        console.log("Se requiere que la cantidad a depositar sea mayor que 0")
+      document.write("Se requiere que la cantidad a depositar sea mayor que 0.<br>");
     }
-}
+  }
 
   this.extraer = function(cantidad){
     if(cantidad > 0 && cantidad <= this.saldo){
-        this.saldo -= cantidad
-        console.log(`Han sido extraidos ${cantidad} pesos de su cuenta`)
+      this.saldo -= cantidad;
+      document.write(`Han sido extraidos ${cantidad} pesos de su cuenta.<br>`);
     } else{
-        console.log("La cantidad que desea extraer es mayor que el saldo de su cuenta")
+      document.write("La cantidad que desea extraer es mayor que el saldo de su cuenta.<br>");
     }
   }
-  
-  this.informe = function(){
-    console.log(`Titular: ${this.titular} | Saldo: ${this.saldo}`)
 
+  this.informe = function(){
+    document.write(`Titular: ${this.titular} | Saldo: ${this.saldo}<br>`);
   }
 }
 
 let cuenta1 = new CuentaBancaria();
 cuenta1.informe();
-cuenta1.depositar(1000);
+
+let cantidadDepositar = prompt("Ingrese la cantidad que desea depositar:");
+cuenta1.depositar(parseFloat(cantidadDepositar));
 cuenta1.informe();
-cuenta1.extraer(500);
+
+let cantidadExtraer = prompt("Ingrese la cantidad que desea extraer:");
+cuenta1.extraer(parseFloat(cantidadExtraer));
 cuenta1.informe();
